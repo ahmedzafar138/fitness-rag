@@ -1,0 +1,42 @@
+# 🔐 Environment variables (IMPORTANT)
+.env
+
+# 🐍 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🧪 Virtual environment
+venv/
+env/
+.venv/
+
+# 📦 Installed packages (just in case)
+site-packages/
+
+# 🗂️ OS files
+.DS_Store
+Thumbs.db
+
+# 📝 Logs
+*.log
+
+# 📊 Large data files (optional but recommended)
+data/pdfs/*
+data/txt/*
+
+# Keep folder but ignore contents
+!data/pdfs/.gitkeep
+!data/txt/.gitkeep
+
+# 🧰 VS Code settings (optional)
+.vscode/
+
+# 🧪 Temporary files
+*.tmp
+*.temp
+
+# 🧠 Pinecone / embeddings cache (if any later)
+*.faiss
+*.pkl
