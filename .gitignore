@@ -23,11 +23,11 @@ Thumbs.db
 *.log
 
 # 📊 Large data files (optional but recommended)
-data/pdfs/*
+data/pdf/*
 data/txt/*
 
 # Keep folder but ignore contents
-!data/pdfs/.gitkeep
+!data/pdf/.gitkeep
 !data/txt/.gitkeep
 
 # 🧰 VS Code settings (optional)
