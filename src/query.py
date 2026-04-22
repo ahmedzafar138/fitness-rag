@@ -16,25 +16,27 @@ def get_qa_chain():
         embedding=embeddings
     )
 
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 
     llm = ChatOpenAI(
         model="gpt-4o-mini",
-        api_key=OPENAI_API_KEY
+        api_key=OPENAI_API_KEY,
+        temperature=0.2,
+        max_tokens = 120
     )
 
     # Prompt
     prompt = ChatPromptTemplate.from_template("""
-    You are a fitness expert assistant.
+    You are a fitness expert.
 
-    Answer the question naturally and professionally using the provided information.
+    Answer the question in a precise and concise way.
 
-    DO NOT mention:
-    - "context"
-    - "provided text"
-    - "according to the context"
-
-    Just give a clean, direct answer.
+    Rules:
+    - Keep the answer under 3-4 sentences
+    - Do NOT add extra explanations
+    - Do NOT repeat the question
+    - Do NOT mention "context" or "information"
+    - Give only the direct answer
 
     If the answer is not found, say:
     "I don't know based on the available information."

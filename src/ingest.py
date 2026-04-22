@@ -27,4 +27,4 @@ def load_documents():
                 except Exception as e:
                     print(f"⚠️ Skipping file {file}: {e}")
 
-    return documents[:50]
+    return documents
